@@ -59,10 +59,22 @@
 }
 
 @layer base {
+  :root {
+    --container: 72rem;
+  }
+  html, body {
+    height: 100%;
+  }
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto w-full max-w-[var(--container)] px-4;
   }
 }
