@@ -10,6 +10,7 @@ export default defineConfig({
     setupFiles: ["./tests/setupTests.ts"],
     include: ["tests/**/*.{test,spec}.?(c|m)[jt]s?(x)"],
     coverage: { reporter: ["text", "html"] },
+    pool: "forks",
   },
   resolve: {
     alias: {
